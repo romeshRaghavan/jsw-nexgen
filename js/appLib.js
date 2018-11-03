@@ -2746,8 +2746,9 @@ function setDynamicRequestNo(travelRequestNoArray){
             stateArr = travelRequestNoArray[i];
             var travel_no_tr = stateArr.tr_no;
             var travel_title_tr = stateArr.tr_title;
-			var from_tr = stateArr.from; 
+	    var from_tr = stateArr.from; 
             var to_tr = stateArr.to; 
+	     var tr_date = stateArr.tr_date
             var iternary_id_tr=stateArr.iternary;
            
  try{
@@ -2761,6 +2762,7 @@ var request = "<li id = 'tripTravelId_"+i+"' onclick ='fetchTicketPreferences("+
 	  +"<table class='uptripstxttable'>"
 	  +"<tr><td colspan='4'><input class='sltpreftrip' id='travel_title_tr_"+i+"' readonly='true' value= \""+travel_title_tr+"\"></td></tr>"
  	  +"<tr><td>From: </td><td><input class='fligtprefdate' id='from_tr_"+i+"' readonly='true' value="+from_tr+"></td><td>To: </td><td><input class='fligtprefdate' id='to_tr_"+i+"' readonly='true' value="+to_tr+"></td></tr>"
+	  +"<tr><td>Travel Date:</td><td><input class='traveldatefld' id='tr_date_"+i+"' readonly='true' value="+tr_date+"></td></tr>"
       +"</div>"
       +"</div>"
       +"</li>";
