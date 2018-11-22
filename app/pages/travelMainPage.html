@@ -313,6 +313,7 @@
 	  <script>
     onloadTravelSettleData();
      j("#travelRequestName").change(function() {
+	     resetDatepicker();
       getExpenseNamesOnRequestNoChange();
       getStartandEndOnRequestNoChange();
 	  getCurrencyOnRequestNoChange();
@@ -333,6 +334,11 @@
 		field.value='';
 		return false;
 	}
+  }
+		    function resetDatepicker(){
+     $('#expDate').attr('readonly',true)
+       .datepicker("destroy");
+     $('#expDate').val("");
   }
 	  </script>  
 </div>
